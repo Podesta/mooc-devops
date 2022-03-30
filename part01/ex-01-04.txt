@@ -1,0 +1,244 @@
+docker run -it ubuntu sh -c 'apt update; apt install --yes curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+[33m0% [1 InRelease 14.0 kB/265 kB 5%] [Waiting for headers][0m                                                        Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+[33m0% [1 InRelease 14.0 kB/265 kB 5%] [2 InRelease 14.0 kB/114 kB 12%][0m[33m0% [1 InRelease 99.7 kB/265 kB 38%] [2 InRelease 99.6 kB/114 kB 88%][0m[33m                                                                    0% [1 InRelease 125 kB/265 kB 47%][0m[33m0% [1 InRelease 171 kB/265 kB 65%][0m[33m                                  0% [Waiting for headers][0m                        Get:3 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1069 kB]
+[33m0% [Waiting for headers] [3 Packages 5501 B/1069 kB 1%][0m[33m0% [Waiting for headers] [3 Packages 76.9 kB/1069 kB 7%][0m                                                        Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+[33m0% [4 InRelease 5417 B/114 kB 5%] [3 Packages 115 kB/1069 kB 11%][0m[33m                                                                 0% [3 Packages 121 kB/1069 kB 11%][0m[33m0% [Waiting for headers] [3 Packages 183 kB/1069 kB 17%][0m                                                        Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+[33m0% [5 InRelease 5417 B/108 kB 5%] [3 Packages 300 kB/1069 kB 28%][0m[33m                                                                 0% [3 Packages 428 kB/1069 kB 40%][0m[33m17% [Waiting for headers] [3 Packages 557 kB/1069 kB 52%][0m                                                         Get:6 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+[33m18% [6 Packages 2649 B/33.4 kB 8%] [3 Packages 861 kB/1069 kB 81%][0m[33m                                                                  18% [3 Packages 912 kB/1069 kB 85%][0m                                   Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+[33m18% [7 Packages 9009 B/1275 kB 1%] [3 Packages 912 kB/1069 kB 85%][0m[33m18% [6 Packages store 0 B] [7 Packages 9009 B/1275 kB 1%] [3 Packages 914 kB/10[0m[33m                                                                               19% [7 Packages 17.6 kB/1275 kB 1%] [3 Packages 928 kB/1069 kB 87%][0m[33m                                                                   19% [7 Packages 70.4 kB/1275 kB 6%][0m[33m19% [3 Packages store 0 B] [7 Packages 70.4 kB/1275 kB 6%][0m[33m                                                          20% [7 Packages 210 kB/1275 kB 17%] [Waiting for headers][0m                                                         Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1686 kB]
+[33m21% [7 Packages 415 kB/1275 kB 33%] [8 Packages 8357 B/1686 kB 0%][0m[33m                                                                  30% [8 Packages 1636 kB/1686 kB 97%][0m                                    Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+[33m30% [9 Packages 4979 B/11.3 MB 0%] [8 Packages 1636 kB/1686 kB 97%][0m[33m30% [7 Packages store 0 B] [9 Packages 4979 B/11.3 MB 0%] [8 Packages 1636 kB/1[0m[33m                                                                               31% [7 Packages store 0 B] [9 Packages 33.5 kB/11.3 MB 0%][0m                                                          Get:10 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [25.8 kB]
+[33m31% [7 Packages store 0 B] [9 Packages 33.5 kB/11.3 MB 0%] [10 Packages 5719 B/[0m[33m                                                                               31% [7 Packages store 0 B] [9 Packages 45.0 kB/11.3 MB 0%][0m                                                          Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [863 kB]
+[33m31% [7 Packages store 0 B] [9 Packages 45.0 kB/11.3 MB 0%] [11 Packages 1160 B/[0m[33m                                                                               36% [9 Packages 452 kB/11.3 MB 4%] [11 Packages 794 kB/863 kB 92%][0m[33m36% [8 Packages store 0 B] [9 Packages 452 kB/11.3 MB 4%] [11 Packages 794 kB/8[0m[33m                                                                               36% [8 Packages store 0 B] [9 Packages 488 kB/11.3 MB 4%][0m[33m                                                         40% [9 Packages 1379 kB/11.3 MB 12%][0m[33m40% [10 Packages store 0 B] [9 Packages 1383 kB/11.3 MB 12%][0m[33m                                                            41% [9 Packages 1402 kB/11.3 MB 12%][0m[33m41% [11 Packages store 0 B] [9 Packages 1402 kB/11.3 MB 12%][0m[33m                                                            44% [9 Packages 2054 kB/11.3 MB 18%][0m[33m75% [9 Packages 10.4 MB/11.3 MB 91%][0m[33m                                    78% [Working][0m             Get:12 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+[33m78% [12 Packages 0 B/177 kB 0%][0m[33m79% [9 Packages store 0 B] [12 Packages 176 kB/177 kB 99%][0m[33m                                                          79% [9 Packages store 0 B][0m                          Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [30.3 kB]
+[33m79% [9 Packages store 0 B] [13 Packages 0 B/30.3 kB 0%][0m[33m                                                       79% [9 Packages store 0 B][0m                          Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1146 kB]
+[33m79% [9 Packages store 0 B] [14 Packages 0 B/1146 kB 0%][0m[33m                                                       83% [9 Packages store 0 B][0m                          Get:15 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1147 kB]
+[33m83% [9 Packages store 0 B] [15 Packages 18.1 kB/1147 kB 2%][0m[33m                                                           87% [9 Packages store 0 B][0m                          Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2106 kB]
+[33m88% [9 Packages store 0 B] [16 Packages 19.9 kB/2106 kB 1%][0m[33m                                                           95% [9 Packages store 0 B][0m                          Get:17 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [51.2 kB]
+[33m95% [9 Packages store 0 B] [17 Packages 0 B/51.2 kB 0%][0m[33m                                                       95% [9 Packages store 0 B][0m                          Get:18 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [26.0 kB]
+[33m96% [9 Packages store 0 B] [18 Packages 25.3 kB/26.0 kB 97%][0m[33m                                                            96% [9 Packages store 0 B][0m[33m                          96% [Working][0m[33m96% [12 Packages store 0 B][0m[33m                           97% [Working][0m[33m97% [13 Packages store 0 B][0m[33m                           97% [Working][0m[33m97% [14 Packages store 0 B][0m[33m                           98% [Working][0m[33m98% [15 Packages store 0 B][0m[33m                           98% [Working][0m[33m98% [16 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [17 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [18 Packages store 0 B][0m[33m                           100% [Working][0m              Fetched 21.6 MB in 4s (5485 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 70%Reading package lists... 70%Reading package lists... 75%Reading package lists... 75%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 83%Reading package lists... 89%Reading package lists... 89%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+All packages are up to date.
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 70%Reading package lists... 70%Reading package lists... 75%Reading package lists... 75%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 82%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates krb5-locales libasn1-8-heimdal libbrotli1 libcurl4
+  libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libk5crypto3 libkeyutils1
+  libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common
+  libnghttp2-14 libpsl5 libroken18-heimdal librtmp1 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4 libssl1.1
+  libwind0-heimdal openssl publicsuffix
+Suggested packages:
+  krb5-doc krb5-user libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+  libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl krb5-locales libasn1-8-heimdal libbrotli1 libcurl4
+  libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libk5crypto3 libkeyutils1
+  libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common
+  libnghttp2-14 libpsl5 libroken18-heimdal librtmp1 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4 libssl1.1
+  libwind0-heimdal openssl publicsuffix
+0 upgraded, 32 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5447 kB of archives.
+After this operation, 16.7 MB of additional disk space will be used.
+[33m0% [Working][0m[33m0% [Waiting for headers][0m                        Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.12 [1322 kB]
+[33m0% [1 libssl1.1 14.0 kB/1322 kB 1%][0m[33m1% [1 libssl1.1 39.7 kB/1322 kB 3%][0m[33m2% [1 libssl1.1 165 kB/1322 kB 13%][0m[33m10% [1 libssl1.1 668 kB/1322 kB 51%][0m[33m                                    20% [Working][0m             Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssl amd64 1.1.1f-1ubuntu2.12 [620 kB]
+[33m20% [2 openssl 6857 B/620 kB 1%][0m[33m                                30% [Working][0m             Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20210119~20.04.2 [145 kB]
+[33m30% [3 ca-certificates 498 B/145 kB 0%][0m[33m                                       33% [Working][0m             Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2 [549 kB]
+[33m33% [4 libsqlite3-0 4847 B/549 kB 1%][0m[33m                                     41% [Working][0m             Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 krb5-locales all 1.17-6ubuntu4.1 [11.4 kB]
+[33m41% [5 krb5-locales 5546 B/11.4 kB 48%][0m[33m                                       42% [Working][0m             Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5support0 amd64 1.17-6ubuntu4.1 [30.9 kB]
+[33m42% [6 libkrb5support0 961 B/30.9 kB 3%][0m[33m                                        43% [Working][0m             Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libk5crypto3 amd64 1.17-6ubuntu4.1 [79.9 kB]
+[33m43% [7 libk5crypto3 4015 B/79.9 kB 5%][0m[33m                                      45% [Working][0m             Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 libkeyutils1 amd64 1.6-6ubuntu1 [10.2 kB]
+[33m45% [8 libkeyutils1 3758 B/10.2 kB 37%][0m[33m                                       46% [Working][0m             Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5-3 amd64 1.17-6ubuntu4.1 [330 kB]
+[33m46% [9 libkrb5-3 399 B/330 kB 0%][0m[33m                                 51% [Working][0m             Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgssapi-krb5-2 amd64 1.17-6ubuntu4.1 [121 kB]
+[33m51% [10 libgssapi-krb5-2 5776 B/121 kB 5%][0m[33m                                          54% [Working][0m             Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 libpsl5 amd64 0.21.0-1ubuntu1 [51.5 kB]
+[33m54% [11 libpsl5 5547 B/51.5 kB 11%][0m[33m                                   55% [Working][0m             Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 publicsuffix all 20200303.0012-1 [111 kB]
+[33m55% [12 publicsuffix 1631 B/111 kB 1%][0m[33m                                      57% [Working][0m             Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libbrotli1 amd64 1.0.7-6ubuntu0.1 [267 kB]
+[33m57% [13 libbrotli1 1210 B/267 kB 0%][0m[33m                                    62% [Working][0m             Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 libroken18-heimdal amd64 7.7.0+dfsg-1ubuntu1 [41.8 kB]
+[33m62% [14 libroken18-heimdal 5345 B/41.8 kB 13%][0m[33m                                              63% [Working][0m             Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 libasn1-8-heimdal amd64 7.7.0+dfsg-1ubuntu1 [181 kB]
+[33m63% [15 libasn1-8-heimdal 4096 B/181 kB 2%][0m[33m                                           66% [Working][0m             Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 libheimbase1-heimdal amd64 7.7.0+dfsg-1ubuntu1 [29.7 kB]
+[33m66% [16 libheimbase1-heimdal 0 B/29.7 kB 0%][0m[33m                                            67% [Working][0m             Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libhcrypto4-heimdal amd64 7.7.0+dfsg-1ubuntu1 [87.9 kB]
+[33m67% [17 libhcrypto4-heimdal 0 B/87.9 kB 0%][0m[33m                                           69% [Working][0m             Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libwind0-heimdal amd64 7.7.0+dfsg-1ubuntu1 [48.0 kB]
+[33m69% [18 libwind0-heimdal 2424 B/48.0 kB 5%][0m[33m                                           71% [Working][0m             Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 libhx509-5-heimdal amd64 7.7.0+dfsg-1ubuntu1 [107 kB]
+[33m71% [19 libhx509-5-heimdal 0 B/107 kB 0%][0m[33m                                         73% [Working][0m             Get:20 http://archive.ubuntu.com/ubuntu focal/main amd64 libkrb5-26-heimdal amd64 7.7.0+dfsg-1ubuntu1 [208 kB]
+[33m73% [20 libkrb5-26-heimdal 0 B/208 kB 0%][0m[33m                                         76% [Working][0m             Get:21 http://archive.ubuntu.com/ubuntu focal/main amd64 libheimntlm0-heimdal amd64 7.7.0+dfsg-1ubuntu1 [15.1 kB]
+[33m76% [21 libheimntlm0-heimdal 3921 B/15.1 kB 26%][0m[33m                                                77% [Working][0m             Get:22 http://archive.ubuntu.com/ubuntu focal/main amd64 libgssapi3-heimdal amd64 7.7.0+dfsg-1ubuntu1 [96.1 kB]
+[33m77% [22 libgssapi3-heimdal 4096 B/96.1 kB 4%][0m[33m                                             79% [Working][0m             Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-2ubuntu0.1 [14.7 kB]
+[33m79% [23 libsasl2-modules-db 3265 B/14.7 kB 22%][0m[33m                                               80% [Working][0m             Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg-2ubuntu0.1 [49.3 kB]
+[33m80% [24 libsasl2-2 2564 B/49.3 kB 5%][0m[33m                                     81% [Working][0m             Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-common all 2.4.49+dfsg-2ubuntu1.8 [16.6 kB]
+[33m82% [25 libldap-common 2931 B/16.6 kB 18%][0m[33m                                          82% [Working][0m             Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-2.4-2 amd64 2.4.49+dfsg-2ubuntu1.8 [155 kB]
+[33m82% [26 libldap-2.4-2 8192 B/155 kB 5%][0m[33m                                       85% [Working][0m             Get:27 http://archive.ubuntu.com/ubuntu focal/main amd64 libnghttp2-14 amd64 1.40.0-1build1 [78.7 kB]
+[33m85% [27 libnghttp2-14 8943 B/78.7 kB 11%][0m[33m                                         87% [Working][0m             Get:28 http://archive.ubuntu.com/ubuntu focal/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build1 [54.9 kB]
+[33m87% [28 librtmp1 0 B/54.9 kB 0%][0m[33m                                88% [Working][0m             Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssh-4 amd64 0.9.3-2ubuntu2.2 [170 kB]
+[33m89% [29 libssh-4 3295 B/170 kB 2%][0m[33m                                  92% [Working][0m             Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.7 [234 kB]
+[33m92% [30 libcurl4 11.6 kB/234 kB 5%][0m[33m                                   96% [Working][0m             Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.7 [161 kB]
+[33m96% [31 curl 5425 B/161 kB 3%][0m[33m                              99% [Working][0m             Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg-2ubuntu0.1 [48.8 kB]
+[33m99% [32 libsasl2-modules 0 B/48.8 kB 0%][0m[33m                                        100% [Working][0m              Fetched 5447 kB in 4s (1375 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libssl1.1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4127 files and directories currently installed.)
+Preparing to unpack .../00-libssl1.1_1.1.1f-1ubuntu2.12_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.12) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../01-openssl_1.1.1f-1ubuntu2.12_amd64.deb ...
+Unpacking openssl (1.1.1f-1ubuntu2.12) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../02-ca-certificates_20210119~20.04.2_all.deb ...
+Unpacking ca-certificates (20210119~20.04.2) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../03-libsqlite3-0_3.31.1-4ubuntu0.2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../04-krb5-locales_1.17-6ubuntu4.1_all.deb ...
+Unpacking krb5-locales (1.17-6ubuntu4.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../05-libkrb5support0_1.17-6ubuntu4.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.17-6ubuntu4.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../06-libk5crypto3_1.17-6ubuntu4.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.17-6ubuntu4.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../07-libkeyutils1_1.6-6ubuntu1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6ubuntu1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../08-libkrb5-3_1.17-6ubuntu4.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.17-6ubuntu4.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../09-libgssapi-krb5-2_1.17-6ubuntu4.1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.17-6ubuntu4.1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../10-libpsl5_0.21.0-1ubuntu1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1ubuntu1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../11-publicsuffix_20200303.0012-1_all.deb ...
+Unpacking publicsuffix (20200303.0012-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../12-libbrotli1_1.0.7-6ubuntu0.1_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.7-6ubuntu0.1) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../13-libroken18-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../14-libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../15-libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../16-libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../17-libwind0-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../18-libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../19-libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../20-libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../21-libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../22-libsasl2-modules-db_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../23-libsasl2-2_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../24-libldap-common_2.4.49+dfsg-2ubuntu1.8_all.deb ...
+Unpacking libldap-common (2.4.49+dfsg-2ubuntu1.8) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../25-libldap-2.4-2_2.4.49+dfsg-2ubuntu1.8_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.8) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../26-libnghttp2-14_1.40.0-1build1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.40.0-1build1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2build1_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build1) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../28-libssh-4_0.9.3-2ubuntu2.2_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.3-2ubuntu2.2) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../29-libcurl4_7.68.0-1ubuntu2.7_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../30-curl_7.68.0-1ubuntu2.7_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.7) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../31-libsasl2-modules_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Setting up libkeyutils1:amd64 (1.6-6ubuntu1) ...
+Setting up libpsl5:amd64 (0.21.0-1ubuntu1) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.12) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libbrotli1:amd64 (1.0.7-6ubuntu0.1) ...
+Setting up libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Setting up libnghttp2-14:amd64 (1.40.0-1build1) ...
+Setting up krb5-locales (1.17-6ubuntu4.1) ...
+Setting up libldap-common (2.4.49+dfsg-2ubuntu1.8) ...
+Setting up libkrb5support0:amd64 (1.17-6ubuntu4.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build1) ...
+Setting up libk5crypto3:amd64 (1.17-6ubuntu4.1) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Setting up libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libkrb5-3:amd64 (1.17-6ubuntu4.1) ...
+Setting up openssl (1.1.1f-1ubuntu2.12) ...
+Setting up publicsuffix (20200303.0012-1) ...
+Setting up libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up ca-certificates (20210119~20.04.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+128 added, 0 removed; done.
+Setting up libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libgssapi-krb5-2:amd64 (1.17-6ubuntu4.1) ...
+Setting up libssh-4:amd64 (0.9.3-2ubuntu2.2) ...
+Setting up libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1) ...
+Setting up libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.8) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.7) ...
+Setting up curl (7.68.0-1ubuntu2.7) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+Processing triggers for ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>

@@ -1,0 +1,8 @@
+docker run -d -it devopsdockeruh/simple-web-service:ubuntu
+
+docker exec -it peaceful_mahavira bash -c 'tail -f text.log'
+OR
+docker exec -it peaceful_mahavira bash
+tail -f text.logs
+
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
