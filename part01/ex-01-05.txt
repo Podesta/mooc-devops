@@ -1,0 +1,31 @@
+SECRET: same
+SIZE: alpine is more than 5x smaller
+
+docker images
+REPOSITORY                          TAG         IMAGE ID       CREATED         SIZE
+capf                                latest      e30952f620e3   3 days ago      523MB
+node                                14-alpine   a310e5ff0582   4 days ago      119MB
+ubuntu                              latest      ff0fea8310f3   2 weeks ago     72.8MB
+fav_distro                          bionic      b67d6ac264e4   2 weeks ago     63.2MB
+ubuntu                              18.04       b67d6ac264e4   2 weeks ago     63.2MB
+devopsdockeruh/simple-web-service   ubuntu      4e3362e907d5   12 months ago   83MB
+devopsdockeruh/simple-web-service   alpine      fd312adc88e0   12 months ago   15.7MB
+
+docker container ls -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED              STATUS                     PORTS     NAMES
+a800f5e81834   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    About a minute ago   Up About a minute                    wizardly_lederberg
+9f62259356a6   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    2 minutes ago        Up 2 minutes                         sad_turing
+314bbe010ecd   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server…"   3 minutes ago        Exited (0) 3 minutes ago             brave_swanson
+10971dbabc2a   capf                                       "docker-entrypoint.s…"   3 days ago           Exited (0) 3 days ago                distracted_mayer
+f8970bd75256   node:14-alpine                             "docker-entrypoint.s…"   3 days ago           Exited (1) 3 days ago                gallant_wescoff
+d6898a288774   node:14-alpine                             "docker-entrypoint.s…"   3 days ago           Exited (0) 3 days ago                agitated_kowalevski
+
+docker run -d devopsdockeruh/simple-web-service:ubuntu
+docker exec -it wizardly_lederberg sh
+server  text.log                           
+#  cat text.log              
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'                                                                                                                        
+docker run -d devopsdockeruh/simple-web-service:alpine
+docker exec -it sad_turing sh
+/usr/src/app # cat text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
