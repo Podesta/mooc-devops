@@ -4,7 +4,7 @@ RUN apt update
 
 RUN apt install --yes curl
 
-WORKDIR /us/src/app
+WORKDIR /usr/src/app
 
 COPY ./curlWebsite.sh ./
 
