@@ -1,11 +1,13 @@
 FROM ubuntu:20.04
 
-RUN apt update
+RUN apt-get update
 
-RUN apt install --yes curl
+RUN apt-get install --yes curl
 
 WORKDIR /usr/src/app
 
 COPY ./curlWebsite.sh ./
 
-CMD ./curlWebsite.sh
+ENTRYPOINT [ "./curlWebsite.sh" ]
+
+CMD [ "helsinki.fi" ]
