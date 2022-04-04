@@ -8,4 +8,6 @@ COPY ./example-backend/ ./
 
 RUN go build
 
+ENV REQUEST_ORIGIN=http://localhost:3000
+
 CMD [ "./server" ]
